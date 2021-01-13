@@ -37,17 +37,17 @@ ball.shapeColor = "red";
 }
 
 
-if (block4.isTouching(ball) && ball.bounceoff(block4))
+if (block4.isTouching(ball) && ball.bounceOff(block4))
   {
     ball.shapeColor = "green";
   }
 
-if (block3.isTouching(ball) && ball.bounceoff(block3))
+if (block3.isTouching(ball) && ball.bounceOff(block3))
   {
     ball.shapeColor = "blue";
   }
 
-  if (block2.isTouching(ball) && ball.bounceoff(block2))
+  if (block2.isTouching(ball) && ball.bounceOff(block2))
   {
     ball.shapeColor = "yellow";
     ball.velocityY = 0;
