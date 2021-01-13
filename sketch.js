@@ -1,5 +1,5 @@
 var ball,block1,block2,block3,block4;
-var music;
+var music,edges;
 var canvas
 
 function preload()
@@ -30,24 +30,24 @@ ball.velocityY =  3;
 
 function draw(){
 background(0);
-createEdgeSprites();
+edges = createEdgeSprites();
 music.play();
 if (ball.isTouching(block1)){
 ball.shapeColor = "red";
 }
 
 
-if (block4.isTouching(ball) && ball.bounceoff(surface3))
+if (block4.isTouching(ball) && ball.bounceoff(block4))
   {
     ball.shapeColor = "green";
   }
 
-if (block3.isTouching(ball) && ball.bounceoff(surface4))
+if (block3.isTouching(ball) && ball.bounceoff(block3))
   {
     ball.shapeColor = "blue";
   }
 
-  if (block2.isTouching(ball) && ball.bounceoff(surface1))
+  if (block2.isTouching(ball) && ball.bounceoff(block2))
   {
     ball.shapeColor = "yellow";
     ball.velocityY = 0;
